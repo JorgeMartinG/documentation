@@ -1,4 +1,4 @@
-## Entornos virtuales en python
+# Entornos virtuales en Python _(virtualenv)_
 ### ¿Qué es un entrono virtual?
 
 Normalmente cuando se ejecuta un script en python, se utiliza el intérprete global instalado en el sistema.
@@ -14,7 +14,7 @@ Permite a otros desarrolladores recrear exáctamente el mismo entrono de desarro
 - **Aislamiento**\
 Si un proyecto requiere una versión específica de una biblioteca, puedes tenerla solo en su propio entorno sin afectar a otros proyectos.
 
-### Instalación, creación y eliminación de un entorno virtual
+## Instalación, creación y eliminación de un entorno virtual
 
 Existen numerosas herramientas para la creación de entornos virutales. En este caso se va a explicar el proceso mediante **virtualenv**.
 
@@ -59,7 +59,7 @@ La forma de **salir de un entorno virtual** es mediante el comando `deactivate`.
 
 Para **eliminar un entorno virtual** símplemente será necesario eliminar la carpeta `./env` o el nombre que le hayamos dado en la creación del mismo.
 
-### Instalación y desinstalación de librerías
+## Instalación y desinstalación de librerías
 
 Ya activado un entrono virtual, cualquier librería que se instale mediante **pip** será única de ese entorno virtual. Es posible especificar la versión aunque esto es opcional.
 
@@ -77,6 +77,7 @@ pip uninstall requests
 >	Mediante el comando `pip show library` veremos información sobre una librería concreta y sus dependencias.
 >
 >	Puede darse que al importar una librería en python esta no se reconozca porque sea necesario especificar el intérprete en el editor. Este es el caso, por ejemplo, de **_Virtual Studio Code_**.
+>
 >	Es una buena práctica generar un archivo **_requirements.txt_** que contenga las dependencias del proyecto. De este modo permite desplegarlo de forma rápida.
 
 #### Generar archivo de requerimientos
