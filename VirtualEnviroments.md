@@ -26,13 +26,14 @@ virtualenv env
 ```
 
 Ya creado, para **hacer uso del entorno virtual** y no del entrono global este debe ser activado.
-<center>
+
+<div align="center">
 
 |           windows          |            Linux           |
 |:--------------------------:|:--------------------------:|
 | `env\Scripts\activate.bat` | `source /env/bin/activate` |
 
-</center>
+</div>
 
 Una vez se activa, normalmente el prompt de la consola suele indicar que nos encontramos en un entorno virtual mediante un indicativo como **_(env)_**.
 
@@ -79,11 +80,10 @@ pip freeze > requirements.txt
 ```
 
 Un ejemplo de un archivo de requerimientos sería el siguiente:
-<center>
 
-![alt text](2024-06-21_12-58.png)
-
-</center>
+<p align="center">
+	<img title="requirements.txt file example" alt="requirements.txt" src="./Images/requirements.png">
+</p>
 
 #### Instalar dependencias desde un archivo de requerimientos
 
