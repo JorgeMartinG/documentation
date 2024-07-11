@@ -52,27 +52,28 @@ Docker puede ser instalado de distintas maneras en base a las necesidades del us
 sudo dpkg -i ./docker-*.deb ./containerd-*.deb
 ```
 
-#### 4. Utilizar un script de instalación. <ins>Recomendado únicamente para entornos de desarrollo.</ins>
+#### 4. Utilizar un script de instalación.
+_(Recomendado únicamente para entornos de desarrollo)._
 
 Docker proporciona un **<a href="https://get.docker.com/">script</a>** para instalar Docker en entornos de desarrollo de forma no interactiva.
 ```sh
 curl -fsSL https://get.docker.com -o get-docker.sh # Script de instalación.
 sudo sh ./get-docker.sh # Con --dry-run revisar los pasos ejecutará el script.
 ```
-> [!TIP]
-> Para verificar que la instalación de **Docker Engine** es exitosa ejecutando la imagen `hello-world`:
-> ```sh
-> sudo service docker start && sudo docker run hello-world
-> ```
-> Este comando descarga una imagen de prueba y la ejecuta en un contenedor. Al ejecutarse, muestra un mensaje de confirmación y se cierra.
+
+Para verificar que la instalación de **Docker Engine** es exitosa ejecutando la imagen `hello-world`:
+```sh
+sudo service docker start && sudo docker run hello-world
+```
+Este comando descarga una imagen de prueba y la ejecuta en un contenedor. Al ejecutarse, muestra un mensaje de confirmación y se cierra.
 
 ### Desinstalación de Docker Engine
-1) Desinstalar los paquetes _Docker Engine, CLI, containerd y Docker Compose:_
-    ```bash
-    sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
-    ```
-2) Eliminar imágenes, contenedores, volúmenes y archivos de configuración:
-    ```sh
-    sudo rm -rf /var/lib/docker
-    sudo rm -rf /var/lib/containerd
-    ```
+Desinstalar los paquetes _Docker Engine, CLI, containerd y Docker Compose:_
+```bash
+sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
+```
+Eliminar imágenes, contenedores, volúmenes y archivos de configuración:
+```sh
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+```
