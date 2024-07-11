@@ -31,34 +31,34 @@ Un repositorio de imágenes para contenedores. Es el repositorio por defecto de 
 > + Debian Bullseye 11 (_oldstable_)
 ### Métodos de instalación
 Docker puede ser instalado de distintas maneras en base a las necesidades del usuario:
-1) Utilizar **Docker Engine** incluido en <a href="https://desktop.docker.com/linux/main/amd64/157355/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64">Docker Desktop for Linux.</a>
+#### 1. Utilizar Docker Engine incluido en <a href="https://desktop.docker.com/linux/main/amd64/157355/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64">Docker Desktop for Linux.</a>
 
 > [!NOTE]
 > **Docker Desktop for Linux** es un IDE que simplifica la gestión de contenedores y servicios. Incluye _Docker Engine_, _Docker CLI Client_, _Docker Compose_...
 
-2) Instalar **Docker Engine** mediante los <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">repositorios</a> de `apt`.
+#### 2. Instalar Docker Engine mediante los <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">repositorios</a> de `apt`.
 
-3) Instalar y gestionar las actualizaciones de forma manual.
-    + Visitar la página <a href="https://download.docker.com/linux/debian/dists/.">`https://download.docker.com/linux/debian/dists/`</a>
+#### 3. Instalar y gestionar las actualizaciones de forma manual.
++ Visitar la página <a href="https://download.docker.com/linux/debian/dists/.">`https://download.docker.com/linux/debian/dists/`</a>
 
-    + Seleccionar la versión de Debian de la lista.
++ Seleccionar la versión de Debian de la lista.
 
-    + Dirigirse a _`/pool/stable/`_ y seleccionar la arquitectura correcta (`amd64`, `armhf`, `arm64` o `s390x`).
++ Dirigirse a _`/pool/stable/`_ y seleccionar la arquitectura correcta (`amd64`, `armhf`, `arm64` o `s390x`).
 
-    + Descargar los paquetes _.deb_ → `containerd.io`, `docker-ce`, `docker-ce-cli`, `docker-buildx-plugin` y `docker-compose-plugin` con su correspondiente versión y arquitectura.
++ Descargar los paquetes _.deb_ → `containerd.io`, `docker-ce`, `docker-ce-cli`, `docker-buildx-plugin` y `docker-compose-plugin` con su correspondiente versión y arquitectura.
 
-    + Instalar los paquetes descargados:
-    ```sh
-    sudo dpkg -i ./docker-*.deb ./containerd-*.deb
-    ```
++ Instalar los paquetes descargados:
+```sh
+sudo dpkg -i ./docker-*.deb ./containerd-*.deb
+```
 
-4) Utilizar un script de instalación. <ins>Recomendado únicamente para entornos de desarrollo.</ins>
+#### 4. Utilizar un script de instalación. <ins>Recomendado únicamente para entornos de desarrollo.</ins>
 
-    Docker proporciona un **<a href="https://get.docker.com/">script</a>** para instalar Docker en entornos de desarrollo de forma no interactiva.
-    ```sh
-    curl -fsSL https://get.docker.com -o get-docker.sh # Script de instalación.
-    sudo sh ./get-docker.sh # Con --dry-run revisar los pasos ejecutará el script.
-    ```
+Docker proporciona un **<a href="https://get.docker.com/">script</a>** para instalar Docker en entornos de desarrollo de forma no interactiva.
+```sh
+curl -fsSL https://get.docker.com -o get-docker.sh # Script de instalación.
+sudo sh ./get-docker.sh # Con --dry-run revisar los pasos ejecutará el script.
+```
 > [!TIP]
 > Para verificar que la instalación de **Docker Engine** es exitosa ejecutando la imagen `hello-world`:
 > ```sh
@@ -68,11 +68,11 @@ Docker puede ser instalado de distintas maneras en base a las necesidades del us
 
 ### Desinstalación de Docker Engine
 1) Desinstalar los paquetes _Docker Engine, CLI, containerd y Docker Compose:_
-```bash
-sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
-```
+    ```bash
+    sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
+    ```
 2) Eliminar imágenes, contenedores, volúmenes y archivos de configuración:
-```sh
-sudo rm -rf /var/lib/docker
-sudo rm -rf /var/lib/containerd
-```
+    ```sh
+    sudo rm -rf /var/lib/docker
+    sudo rm -rf /var/lib/containerd
+    ```
