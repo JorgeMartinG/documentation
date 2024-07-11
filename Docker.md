@@ -33,8 +33,8 @@ Un repositorio de imágenes para contenedores. Es el repositorio por defecto de 
 Docker puede ser instalado de distintas maneras en base a las necesidades del usuario:
 1) Utilizar **Docker Engine** incluido en <a href="https://desktop.docker.com/linux/main/amd64/157355/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64">Docker Desktop for Linux.</a>
 
-    > [!NOTE]
-    > **Docker Desktop for Linux** es un IDE que simplifica la gestión de contenedores y servicios. Incluye _Docker Engine_, _Docker CLI Client_, _Docker Compose_...
+> [!NOTE]
+> **Docker Desktop for Linux** es un IDE que simplifica la gestión de contenedores y servicios. Incluye _Docker Engine_, _Docker CLI Client_, _Docker Compose_...
 
 2) Instalar **Docker Engine** mediante los <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">repositorios</a> de `apt`.
 
