@@ -36,29 +36,26 @@ Docker puede ser instalado de distintas maneras en base a las necesidades del us
 > **Docker Desktop for Linux** es un IDE que simplifica la gestión de contenedores y servicios. Incluye _Docker Engine_, _Docker CLI Client_, _Docker Compose_...
 #### 2) Instalar **Docker Engine** mediante los <a href="https://docs.docker.com/engine/install/debian/#install-using-the-repository">repositorios</a> de `apt`.
 
-#### 3) Instalar de forma manual _(Las actualizaciones se tendrán que gestionar de forma manual)_.
-    +  Visitar la página <a href="https://download.docker.com/linux/debian/dists/.">`https://download.docker.com/linux/debian/dists/`</a>
+#### 3) Instalar de forma manual.
+Si se instala manualmente, las actualizaciones también se tendrán que gestionar de este modo.
 
-    + Seleccionar la versión de Debian de la lista.
++  Visitar la página <a href="https://download.docker.com/linux/debian/dists/.">`https://download.docker.com/linux/debian/dists/`</a>
 
-    + Dirigirse a `/pool/stable/` y seleccionar la arquitectura (`amd64`, `armhf`, `arm64` o `s390x`).
++ Seleccionar la versión de Debian de la lista.
 
-    + Descargar los siguientes archivos `.deb`:
++ Dirigirse a _`/pool/stable/`_ y seleccionar la arquitectura correcta (`amd64`, `armhf`, `arm64` o `s390x`).
 
-        - `containerd.io_<version>_<arch>.deb`
-        - `docker-ce_<version>_<arch>.deb`
-        - `docker-ce-cli_<version>_<arch>.deb`
-        - `docker-buildx-plugin_<version>_<arch>.deb`
-        - `docker-compose-plugin_<version>_<arch>.deb`
++ Descargar los paquetes _.deb_ → `containerd.io`, `docker-ce`, `docker-ce-cli`, `docker-buildx-plugin` y `docker-compose-plugin` con su correspondiente versión y arquitectura.
 
-    + Instalar los paquetes:
-    ```sh
-    sudo dpkg -i ./docker-*.deb ./containerd-*.deb
-#### 4) Utilizar un script de instalación. <ins>Recomendado únicamente para entornos de desarrollo.</ins>\
++ Instalar los paquetes descargados:
+```sh
+sudo dpkg -i ./docker-*.deb ./containerd-*.deb
+```
+#### 4) Utilizar un script de instalación. <ins>Recomendado únicamente para entornos de desarrollo.</ins>
 Docker proporciona un **<a href="https://get.docker.com/">script</a>** para instalar Docker en entornos de desarrollo de forma no interactiva.
 ```sh
-curl -fsSL https://get.docker.com -o get-docker.sh # Descargar script de instalación.
-sudo sh ./get-docker.sh # Mediante `--dry-run` revisar los pasos ejecutará el script.
+curl -fsSL https://get.docker.com -o get-docker.sh # Script de instalación.
+sudo sh ./get-docker.sh # Con --dry-run revisar los pasos ejecutará el script.
 ```
 Verificar que la instalación de **Docker Engine** es exitosa ejecutando la imagen `hello-world`:
 ```sh
