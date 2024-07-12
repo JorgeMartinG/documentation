@@ -16,14 +16,20 @@ Si un proyecto requiere una versión específica de una biblioteca, puedes tener
 
 ## Instalación, creación y eliminación de un entorno virtual
 
-Existen numerosas herramientas para la creación de entornos virutales. En este caso se va a explicar el proceso mediante **virtualenv**.
+Existen numerosas herramientas para la creación de entornos virutales. En este caso se va a explicar el proceso mediante **virtualenv** y **venv**.
 
-Normalmente es necesario **instalar** _virtualenv_ dado que no viene por defecto en python.
+A partir de python 3.3 **_venv_** viene instalado de forma nativa, sin embargo **_virtualenv_** es necesario instalarlo dado que no viene incluido en python por defecto.
 ```python
 pip install virtualenv
 ```
 
 En la carpeta del proyecto **crear el entorno virtual** con el nombre según preferencia.
+- Crear un entrono virtual con **_venv_**:
+```
+python3 -m venv env
+```
+
+- Crear un entorno virutal con **_virtualenv_**:
 ```python
 virtualenv env
 ```
@@ -37,7 +43,7 @@ Ya creado, para **hacer uso del entorno virtual** y no del entrono global este d
 
 |           windows          |            Linux           |
 |:--------------------------:|:--------------------------:|
-| `env\Scripts\activate.bat` | `source env/bin/activate` |
+| `env\Scripts\activate.bat` | `source env/bin/activate`  |
 
 </div>
 
