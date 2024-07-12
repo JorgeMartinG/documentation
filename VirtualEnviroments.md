@@ -1,4 +1,4 @@
-# Entornos virtuales en Python _(virtualenv)_
+# Entornos virtuales en Python
 ### ¿Qué es un entrono virtual?
 
 Normalmente cuando se ejecuta un script en python, se utiliza el intérprete global instalado en el sistema.
