@@ -51,3 +51,24 @@ Eliminar imágenes, contenedores, volúmenes y archivos de configuración:
 sudo rm -rf /var/lib/docker
 sudo rm -rf /var/lib/containerd
 ```
+### Post-instalación
+#### Incluir usuario en grupo `docker`
+El demonio de Docker se vincula a un socket y el propietario por defecto es `root`.\
+Para acceder desde otro usuario solo es posible mediante `sudo` o agregando al usuario al grupo `docker`. _(En caso de no existir, será necesario crearlo)_ → `sudo groupadd docker`
+```sh
+cat /etc/group | grep "docker"
+sudo usermod -aG docker $USER
+```
+#### Configurar inicio de Docker al arrancar el sistema
+En Debian y Ubuntu Docker inicia en el arranque por defecto.
+Puede activar o desactivarse este comportamiento mediante `systemd`.
+```sh
+# Activar Docker en el arranque
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+```
+```sh
+# Desactivar Docker en el arranque
+sudo systemctl disable docker.service
+sudo systemctl disable containerd.service
+```
