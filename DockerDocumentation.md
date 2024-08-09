@@ -23,3 +23,5 @@ Es el motor que ejecuta y gestiona los contenedores Docker.
     3) **Cliente**: La interfaz de línea de comandos (CLI), que permite interactuar con Docker.
 ### Docker Hub
 Un repositorio de imágenes para contenedores. Es el repositorio por defecto de la plataforma Docker Engine. Pueden encontrarse imágenes oficiales o de proveedores externos.
+
+

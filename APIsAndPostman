@@ -1,0 +1,10 @@
+## ¿Que es una API?
+El término API es una abreviatura de **A**plication **P**rogramming **I**nterfaces.
+
+Se trata de un conjunto de definiciones y protocolos que permite desarrollar e integrar el software de las aplicaciones permitiendo su comunicación mediante un cojunto de reglas.
+
+Así pues, puede decirse que es una forma de que un módulo de un software se comunique o interactúe con otro.
+
+<p align="center">
+	<img title="API Workflow" alt="(env)" src="./Images/api_workflow.png" style="background-color:#fff; border-radius:10px">
+</p>
